@@ -1,1 +1,25 @@
+<?php
+echo "<h3>Soal 1: Switch Case Kendaraan</h3>";
 
+$jumlah_roda = 4; // Silakan ubah untuk menguji
+echo "Jumlah roda yang diinput: <strong>$jumlah_roda</strong> <br>";
+
+switch ($jumlah_roda) {
+    case 2:
+        echo "Jenis kendaraan: Sepeda / Sepeda Motor";
+        break;
+    case 3:
+        echo "Jenis kendaraan: Becak / Bajaj";
+        break;
+    case 4:
+        echo "Jenis kendaraan: Mobil";
+        break;
+    case 6:
+    case 8:
+        echo "Jenis kendaraan: Truk / Bus";
+        break;
+    default:
+        echo "Jenis kendaraan tidak diketahui untuk $jumlah_roda roda.";
+        break;
+}
+?>
