@@ -1,0 +1,12 @@
+<?php
+echo "<h3>Soal 3: Array dan Foreach</h3>";
+
+$hewan = array("Kucing", "Anjing", "Kelinci", "Burung", "Harimau");
+
+echo "Daftar Hewan:<br>";
+echo "<ul>";
+foreach ($hewan as $h) {
+    echo "<li>$h</li>";
+}
+echo "</ul>";
+?>
