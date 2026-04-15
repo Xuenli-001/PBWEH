@@ -1,0 +1,53 @@
+<head>
+    <title>Latihan Praktikum PHP</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .navigasi { margin-bottom: 20px; padding: 15px; background-color: #2c3e50; border-radius: 5px; }
+        .navigasi a { margin-right: 15px; text-decoration: none; color: white; font-weight: bold; padding: 5px 10px; }
+        .navigasi a:hover { background-color: #34495e; border-radius: 3px; }
+        .konten { border: 1px solid #bdc3c7; padding: 20px; border-radius: 5px; background-color: #ecf0f1; }
+    </style>
+</head>
+<body>
+
+    <h2>Latihan Praktikum PHP</h2>
+
+    <div class="navigasi">
+        <a href="index.php">Beranda</a>
+        <a href="?halaman=soal1">Soal 1 (Switch)</a>
+        <a href="?halaman=soal2">Soal 2 (For)</a>
+        <a href="?halaman=soal3">Soal 3 (Foreach)</a>
+        <a href="?halaman=soal4">Soal 4 (Ternary)</a>
+    </div>
+
+    <div class="konten">
+        <?php
+        // Mengambil parameter 'halaman', jika kosong maka set default ke 'beranda'
+        $halaman = isset($_GET['halaman']) ? $_GET['halaman'] : 'beranda';
+
+        // Meng-include file sesuai nilai $halaman
+        switch ($halaman) {
+            case 'beranda':
+                include 'beranda.php';
+                break;
+            case 'soal1':
+                include 'tugas6_1.php';
+                break;
+            case 'soal2':
+                include 'tugas6_2.php';
+                break;
+            case 'soal3':
+                include 'tugas6_3.php';
+                break;
+            case 'soal4':
+                include 'tugas6_4.php';
+                break;
+            default:
+                echo "<p style='color:red;'>Halaman tidak ditemukan.</p>";
+                break;
+        }
+        ?>
+    </div>
+
+</body>
+</html>
