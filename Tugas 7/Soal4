@@ -1,0 +1,9 @@
+<?php
+echo "<h3>Soal 4: Ternary Operator</h3>";
+
+$angka = 5; // Silakan ubah untuk menguji
+
+$hasil = ($angka % 2 == 0) ? "Genap" : "Ganjil";
+
+echo "Angka <strong>$angka</strong> adalah bilangan <strong>$hasil</strong>.";
+?>
