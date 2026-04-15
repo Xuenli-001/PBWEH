@@ -1,0 +1,9 @@
+<?php
+echo "<h3>Soal 2: For Loop Bilangan Genap</h3>";
+echo "Bilangan genap dari 2 sampai 10 adalah: <br><br>";
+
+for ($i = 2; $i <= 10; $i += 2) {
+    echo "<span style='padding: 5px 10px; background: #ddd; margin-right: 5px; border-radius: 3px;'>$i</span>";
+}
+echo "<br>";
+?>
